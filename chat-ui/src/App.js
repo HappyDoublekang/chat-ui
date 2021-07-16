@@ -3,14 +3,20 @@ import './App.css';
 import Button from "./Button"
 
 function App() {
+  const handleButton1Click = () => {
+    console.log("点击事件1");
+  }
+  const handleButton2Click = () => {
+    console.log("点击事件2");
+  }
   return (
     <div>
-      <Button label="按钮">
+      <Button onClick={handleButton1Click} label="按钮">
         <span>
           &gt;
         </span>
       </Button>
-      <Button label="点我" />
+      <Button onClick={handleButton2Click} label="点我" />
     </div>
   );
 }
