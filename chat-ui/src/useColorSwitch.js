@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function useColorSwitch() {
-    const [color, setColor] = useState("#ff0000");
+function useColorSwitch(color1, color2) {
+    const [color, setColor] = useState(color1);
 
     const handleButtonClick = () => {
-        setColor("#00ff00");
+        setColor(color2);
     };
 
     return [color, handleButtonClick];

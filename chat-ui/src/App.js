@@ -4,20 +4,19 @@ import Button from "./Button"
 import useColorSwitch from './useColorSwitch';
 
 function App() {
-  const [color, handleButtonClick] = useColorSwitch();
+  const [color, handleButton1Click] = useColorSwitch("#ff0000", "#00ff00");
+  const [color2, handleButton2Click] = useColorSwitch("#0000ff", "#ff00ff");
 
-  const handleButton2Click = () => {
-    console.log("点击事件2");
-  }
   return (
     <div>
-      <Button onClick={handleButtonClick} label="按钮">
+      <Button onClick={handleButton1Click} label="按钮">
         <span>
           &gt;
         </span>
       </Button>
       <p style={{color}}>这是一段文字</p>
       <Button onClick={handleButton2Click} label="点我" />
+      <p style={{color: color2}}>这是第二段文字</p>
     </div>
   );
 }
