@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <Button onClick={handleButton1Click} label="按钮">
+      <Button width="120px" onClick={handleButton1Click} label="按钮">
         <span>
           &gt;
         </span>

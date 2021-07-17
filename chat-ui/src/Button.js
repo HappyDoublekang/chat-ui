@@ -1,11 +1,17 @@
 import React, { Children } from "react";
+import styled from "styled-components";
 
-function Button({ onClick, label, children }) {
+const StyledButton = styled.div`
+  width: ${({ width }) => width || "80px"};
+  background-color: ${({ theme }) => theme.primaryColor};
+`;
+
+function Button({ width, onClick, label, children }) {
   return (
-    <div onClick={onClick}>
+    <StyledButton width={width} onClick={onClick}>
       <button>{label}</button>
       {children}
-    </div>
+    </StyledButton>
   );
 }
 
